@@ -7,13 +7,13 @@
                     <div id="myCarousel" class="carousel slide">
                         <div class="carousel-inner">
                             <div class="item active">
-                                <div><p>to save energy?</p></div>
+                                <div>to save energy?</div>
                             </div>
                             <div class="item">
-                                <div><p>to optimise your activity?</p></div>
+                                <div>to optimise your activity?</div>
                             </div>
                             <div class="item">
-                                <div><p>to promote open innovation?</p></div>
+                                <div>to promote open innovation?</div>
                             </div>
                         </div>
                     </div>
@@ -33,6 +33,7 @@ $(function(){
 </script>
 <style>
 section.foot-carousel{
+    font-family: OpenSans-Semibold;
     background: #504b57;
     padding-top: 60px;
     padding-bottom: 60px;

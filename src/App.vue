@@ -22,7 +22,4 @@ export default {
   font-size: 14px;
   line-height: 24px;
 }
-h1{
-  font-size: 32px;
-}
 </style>

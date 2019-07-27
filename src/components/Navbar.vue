@@ -72,7 +72,8 @@ export default {
     background-color: #ffffff;
 } */
 .navbar .nav > li > a{
-    font-size: 11px;
+    font-family: OpenSans-Semibold;
+    font-size: 12px;
     font-weight: bold;
     text-align: center;
     margin-top: 5px;

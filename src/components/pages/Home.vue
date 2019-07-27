@@ -76,10 +76,10 @@ header.signup h1 {
     margin-bottom: 20px;
 }
 header.signup h1 span {
+    font-family: OpenSans-Semibold;
     color: #1FCC6E;
 }
 header.signup h3 {
-    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 300;
     font-size: 25px;
     line-height: 42px;
