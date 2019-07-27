@@ -1,5 +1,5 @@
 <template>
-    <section class="trust us">
+    <section class="trust-us">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 text-center m-b-20">

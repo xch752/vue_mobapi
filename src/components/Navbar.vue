@@ -60,7 +60,7 @@ export default {
 .Brand{
     margin-top: 10px;
     margin-left: 20px;
-    margin-right: 20px;
+    margin-right: 10px;
     max-height: 40px;
     position: relative;
     bottom: 16px;
@@ -72,10 +72,12 @@ export default {
     background-color: #ffffff;
 } */
 .navbar .nav > li > a{
+    font-size: 11px;
+    font-weight: bold;
     text-align: center;
     margin-top: 5px;
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-left: 25px;
+    margin-right: 25px;
     color: white;    
 }
 .navbar .nav >li >a:visited{

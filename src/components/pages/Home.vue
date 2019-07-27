@@ -29,6 +29,10 @@
             </header>
             <OurExpertise></OurExpertise>
             <TrustUs></TrustUs>
+            <UseCases></UseCases>
+            <Steps></Steps>
+            <FootCarousel></FootCarousel>
+            <Footer></Footer>
         </div>
     </div>
 </template>
@@ -37,11 +41,19 @@
 import Navbar from '../Navbar'
 import OurExpertise from '../OurExpertise'
 import TrustUs from '../TrustUs'
+import UseCases from '../UseCases'
+import Steps from '../Steps'
+import FootCarousel from '../FootCarousel'
+import Footer from '../Footer'
 export default {
     components: {
         'Navbar': Navbar,
         'OurExpertise':OurExpertise,
-        "TrustUs":TrustUs
+        "TrustUs":TrustUs,
+        "UseCases":UseCases,
+        "Steps":Steps,
+        "FootCarousel":FootCarousel,
+        "Footer":Footer
     }
 }
 
