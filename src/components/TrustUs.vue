@@ -7,7 +7,10 @@
                 </div>
             </div>
             <div class="row client-row client-big p-b-30">
-                <div class="col-md-2 col-xs-4">
+                <div :class='col' v-for="client_img in client_imgs">
+                    <img :src="client_img.url" :alt="client_img.alt">
+                </div>
+                <!-- <div :class="col">
                     <img src="https://www.mobapi.com/uploads/2017/09/client-edf.png" alt="EDF Guyane">
                 </div>
                 <div class="col-md-2 col-xs-4">
@@ -24,7 +27,7 @@
                 </div>
                 <div class="col-md-2 col-xs-4">
                     <img src="https://www.mobapi.com/uploads/2017/09/client-greentechnologie.png" alt="Green Technologie">
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -32,6 +35,37 @@
 
 <script>
 export default {
+    data() {
+        return {
+            col:'col-md-2 col-xs-4',
+            client_imgs:[
+                {
+                    url:'https://www.mobapi.com/uploads/2017/09/client-edf.png',
+                    alt:'EDF Guyane'
+                },
+                {
+                    url:'https://www.mobapi.com/uploads/2017/09/client-po.png',
+                    alt:'Plastic Omnium'
+                },
+                {
+                    url:'https://www.mobapi.com/uploads/2017/09/client-mcdo.png',
+                    alt:'Mc Donalds'
+                },
+                {
+                    url:'https://www.mobapi.com/uploads/2017/09/client-fitnesspark.png',
+                    alt:'Fitness Park'
+                },
+                {
+                    url:'https://www.mobapi.com/uploads/2017/09/client-madiana.png',
+                    alt:'Cinéma Madiana'
+                },
+                {
+                    url:'https://www.mobapi.com/uploads/2017/09/client-greentechnologie.png',
+                    alt:'Green Technologie'
+                }
+            ]
+        }
+    }
 
 }
 

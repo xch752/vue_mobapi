@@ -16,9 +16,9 @@
                                 </span>
                             </h1>
                             <h3 class="text-white">
-                                A simple end-to-end connectivity solution,
+                                {{text_white_line1}}
                                 <br>
-                                from collection of data to publication into dashboards or APIs.
+                                {{text_white_line2}}
                             </h3>
                         </div>
                     </div>
@@ -54,6 +54,12 @@ export default {
         "Steps":Steps,
         "FootCarousel":FootCarousel,
         "Footer":Footer
+    },
+    data() {
+        return {
+            text_white_line1: 'A simple end-to-end connectivity solution,',
+            text_white_line2: 'from collection of data to publication into dashboards or APIs.'
+        }
     }
 }
 

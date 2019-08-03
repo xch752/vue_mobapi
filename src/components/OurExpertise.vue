@@ -8,7 +8,7 @@
             </div>
             <div class="row">
                 <div class="col-md-1">
-                    <img src="https://www.mobapi.com/uploads/2017/09/smart-building.png">
+                    <img :src="expertise_imgs[0].url">
                 </div>
                 <div class="col-md-5">
                     <h1 class="expertise-title">
@@ -20,7 +20,7 @@
                     </p>
                 </div>
                 <div class="col-md-1">
-                    <img src="https://www.mobapi.com/uploads/2017/09/smart-industry.png">
+                    <img :src="expertise_imgs[1].url">
                 </div>
                 <div class="col-md-5">
                     <h1 class="expertise-title">
@@ -34,7 +34,7 @@
             </div>
             <div class="row">
                 <div class="col-md-1">
-                    <img src="https://www.mobapi.com/uploads/2017/09/smart-city.png">
+                    <img :src="expertise_imgs[2].url">
                 </div>
                 <div class="col-md-5">
                     <h1 class="expertise-title">
@@ -46,7 +46,7 @@
                     </p>
                 </div>
                 <div class="col-md-1">
-                    <img src="https://www.mobapi.com/uploads/2017/09/open-data.png">
+                    <img :src="expertise_imgs[3].url">
                 </div>
                 <div class="col-md-5">
                     <h1 class="expertise-title">
@@ -64,6 +64,16 @@
 
 <script>
 export default {
+    data() {
+        return {
+            expertise_imgs:[
+                {url:'https://www.mobapi.com/uploads/2017/09/smart-building.png'},
+                {url:'https://www.mobapi.com/uploads/2017/09/smart-industry.png'},
+                {url:'https://www.mobapi.com/uploads/2017/09/smart-city.png'},
+                {url:'https://www.mobapi.com/uploads/2017/09/open-data.png'},
+            ]
+        }
+    }
 
 }
 

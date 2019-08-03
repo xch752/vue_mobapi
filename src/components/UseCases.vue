@@ -9,7 +9,16 @@
             <div class="row">
                 <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
                     <ul class="use-cases-ul">
-                        <li>
+                        <li v-for="usecase_img in usecase_imgs">
+                            <div class="title">
+                                <img :src="usecase_img.url1" style="width:32px"></img>
+                                <img :src="usecase_img.url2" style="width:16px"></img>
+                                <img :src="usecase_img.url3" style="width:32px"></img>
+                                <span><strong>{{usecase_img.strong}}</strong>{{usecase_img.span}}</span>
+                                <span class="use-case-link"></span>
+                            </div>
+                        </li>
+                        <!-- <li>
                             <div class="title">
                                 <i class="streamline-thermometer"><img src="../assets/img/streamline/streamline-thermometer.png" alt="" style="width:32px"></i>
                                 <i class="streamline-add-1"><img src="../assets/img/streamline/streamline-add-1.png" alt="" style="width:16px"></i>
@@ -44,7 +53,7 @@
                                 <span><strong>Publish</strong> an open data portal for your municipality</span>
                                 <span class="use-case-link"></span>
                             </div>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
             </div>
@@ -54,6 +63,41 @@
 
 <script>
 export default {
+    data() {
+        return {
+            usecase_imgs:[
+                {
+                    url1:require('../assets/img/streamline/streamline-thermometer.png'),
+                    url2:require('../assets/img/streamline/streamline-add-1.png'),
+                    url3:require('../assets/img/streamline/streamline-lightbulb-2.png'),
+                    strong:'Identify',
+                    span:'energy-hogging appliances'
+                },
+                {
+                    url1:require('../assets/img/streamline/streamline-factory.png'),
+                    url2:require('../assets/img/streamline/streamline-add-1.png'),
+                    url3:require('../assets/img/streamline/streamline-dashboard-speed-streamline.png'),
+                    strong:'Gather',
+                    span:' manufacturing data easily, thanks to smart devices'
+                },
+                {
+                    url1:require('../assets/img/streamline/streamline-truck-dump.png'),
+                    url2:require('../assets/img/streamline/streamline-add-1.png'),
+                    url3:require('../assets/img/streamline/streamline-smartphone.png'),
+                    strong:'Optimize',
+                    span:' trash collection routes with sensors on the SIGFOX network'
+                },
+                {
+                    url1:require('../assets/img/streamline/streamline-building-12.png'),
+                    url2:require('../assets/img/streamline/streamline-add-1.png'),
+                    url3:require('../assets/img/streamline/streamline-chart-board.png'),
+                    strong:'Publish',
+                    span:' an open data portal for your municipality'
+                },
+
+            ]
+        }
+    }
 
 }
 
@@ -89,7 +133,6 @@ export default {
 }
 .use-cases-ul .title span {
     position: relative;
-    bottom: 8px;
 }
 .use-cases-ul .title strong {
     font-weight: 600;

@@ -10,7 +10,19 @@
                 </div>
             </div>
             <div class="row row-centered">
-                <div class="col-md-3 col-sm-6 clearfix text-center col-centered">
+                <div :class="col" v-for="icon of icons"> 
+                    <div class="feature feature-icon-steps">
+                        <div class="step-icon">
+                            <img :src="icon.url" alt="">
+                            <h2>
+                                <span>{{icon.id}}/</span>
+                                {{icon.title}}
+                            </h2>
+                            <div>{{icon.content}}</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="col-md-3 col-sm-6 clearfix text-center col-centered">
                     <div class="feature feature-icon-steps">
                         <div class="step-icon">
                             <img src="https://23kri02j3rke414ynf4dgx2i-wpengine.netdna-ssl.com/wp-content/uploads/2017/02/MOBAPI-Step-Collect.png" alt="">
@@ -45,7 +57,7 @@
                             <div>in dashboards</div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
             <div class="row text-center  m-t-50">
                 <div class="text-center col-sm-10 col-sm-offset-1"></div>
@@ -56,7 +68,31 @@
 
 <script>
 export default {
-
+    data(){
+        return {
+            col:'col-md-3 col-sm-6 clearfix text-center col-centered',
+            icons:[
+                {
+                    id:'1',
+                    url:'https://23kri02j3rke414ynf4dgx2i-wpengine.netdna-ssl.com/wp-content/uploads/2017/02/MOBAPI-Step-Collect.png',
+                    title:'COLLECTION',
+                    content:'of your data'
+                },
+                {
+                    id:'2',
+                    url:'https://23kri02j3rke414ynf4dgx2i-wpengine.netdna-ssl.com/wp-content/uploads/2017/02/MOBAPI-Step-Transform.png',
+                    title:'PROCESSING',
+                    content:'in real time'
+                },
+                {
+                    id:'3',
+                    url:'https://23kri02j3rke414ynf4dgx2i-wpengine.netdna-ssl.com/wp-content/uploads/2017/09/MOBAPI-Step-visualize.png',
+                    title:'PUBLICATION',
+                    content:'in dashboards'
+                }
+            ]
+        }
+    }
 }
 
 </script>

@@ -18,7 +18,10 @@
                     </div>
                     <div class="contact-sub-menu col-md-12">
                         <span class="pull-left">© 2019 Mobapi - Made with ♥ in French Guiana</span>
-                        <span class="pull-right">
+                        <span class="pull-right" v-for="img of imgs">
+                            <img class="logo-sponsors-footer" :src="img.url" alt="">
+                        </span>
+                        <!-- <span class="pull-right">
                             <img class="logo-sponsors-footer" src="https://www.mobapi.com/uploads/2015/10/CNES.png" alt="">
                         </span>
                         <span class="pull-right">
@@ -29,7 +32,7 @@
                         </span>
                         <span class="pull-right">
                             <img class="logo-sponsors-footer" src="https://www.mobapi.com/uploads/2017/09/logo-feder.png" alt="">
-                        </span>
+                        </span> -->
                     </div>
                 </div>
             </div>
@@ -39,7 +42,16 @@
 
 <script>
 export default {
-
+    data(){
+        return {
+            imgs:[
+                {url:'https://www.mobapi.com/uploads/2015/10/CNES.png'},
+                {url:'https://www.mobapi.com/uploads/2017/09/logo-ctg.png'},
+                {url:'https://www.mobapi.com/uploads/2017/09/logo-ue.png'},
+                {url:'https://www.mobapi.com/uploads/2017/09/logo-feder.png'}
+            ]
+        }
+    }
 }
 
 </script>

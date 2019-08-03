@@ -7,25 +7,33 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#"><img class ="Brand" alt="Brand" src="https://23kri02j3rke414ynf4dgx2i-wpengine.netdna-ssl.com/img/mobapi-logo.png"></a>
+      <a class="navbar-brand" href="#"><img class ="Brand" alt="Brand" :src="brand_img_url"></a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li><a href="#">SOLUTION<span class="sr-only">(current)</span></a></li>
-        <li><a href="#">TECHNOLOGY</a></li>
-        <li><a href="#">PROJECT</a></li>
-        <li><a href="#">BLOG</a></li>
-      </ul>
+        <ul class="nav navbar-nav">
+            <li v-for="page of pages"><a href="#">{{page.message}}</a></li>
+        </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
 </template>
 
 <script>
-export default {
+    export default {
+        data() {
+            return {
+                brand_img_url:'https://23kri02j3rke414ynf4dgx2i-wpengine.netdna-ssl.com/img/mobapi-logo.png',
+                pages:[
+                    {message:'SOLUTION'},
+                    {message:'TECHNOLOGY'},
+                    {message:'PROJECT'},
+                    {message:'BLOG'}
+                ]
+            }
+        }
 
-}
+    }
 </script>
 <style>
 .navbar {
